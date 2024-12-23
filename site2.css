@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-color: #292929;
+
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-color: rgb(28, 28, 28);
+    padding: 20px 0;
+    height: 100px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-nav {
+    margin: 0 20px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-link {
+    color: #e7e7e7;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active {
+    color: #e7e7e7;
+}
+
+.nav-link:hover {
+    color: #008000;
+}
+
+.contact-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.phone, .city {
+    color: #e7e7e7;
+    text-decoration: none;
+}
+
+.main-content {
+    background-color: #D3D3D3;
+    min-height: calc(100vh - 100px);
+    padding: 20px 0;
+    padding-bottom: 0;
+}
+
+.welcome-section {
+    background-color: #3c3c3c;
+    padding: 20px 0;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+.welcome-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcome-text {
+    flex: 1;
+}
+
+.welcome-text h1 {
+    color: #e7e7e7;
+    font-size: 32px;
+    line-height: 1.4;
+    max-width: 500px;
+    margin-left: 50px;
+}
+
+.welcome-image {
+    flex-shrink: 0;
+    width: 700px;
+    height: 400px;
+    
+}
+
+.car-image {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.hot-offers h2 {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 70px;
+    margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+    .welcome-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .welcome-text h1 {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header {
+        height: auto;
+        padding: 15px 0;
+    }
+    .welcome-image{
+        width: 80%;
+        height: auto;
+    }
+}
+.hot-offers {
+    max-width: 1497px;
+    margin: 50px;
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    color: #000000;
+}
+
+.section-titles {
+    font-size: 30px;
+    text-align: center;
+    margin: 60px;
+    color: #000000;
+}
+
+.offers-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.offer-card {
+    background-color: #323232;
+    border-radius: 12px;
+    padding: 20px;
+    width: 40%;
+    display:inline-flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.car-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.car-title {
+    color: #e7e7e7;
+    font-size: 20px;
+    margin: 0;
+}
+
+.car-description {
+    color: #e7e7e7;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.details-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 200px;
+    align-self: center;
+    transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+    background-color: #1a1a1a;
+}
+
+@media (max-width: 1520px) {
+    .offers-container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .offer-card {
+        width: 100%;
+        max-width: 700px;
+    }
+    
+    .car-image {
+        height: 300px;
+    }
+}
+
+.car-brands {
+    background-color: #333333;
+    padding: 40px 0;
+    margin-top: 0px;
+    width: 100%;
+}
+
+.brands-container {
+    max-width: 1418px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.brand-card {
+    background-color: #000000;
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+}
+
+.brand-logo {
+    width: 260px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.brand-name {
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
+}
+
+.next-button {
+    width: 100px;
+    height: 100px;
+    background-color: #000000;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.next-button:hover {
+    background-color: #1a1a1a;
+}
+
+.next-button svg {
+    width: 60px;
+    height: 60px;
+}
+
+.our-showrooms h2 {
+    color: #000000;
+    font-size: 24px;
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .brands-container {
+        overflow-x: auto;
+        padding: 20px;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .brand-card {
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .brand-card {
+        width: 250px;
+    }
+    
+    .brand-logo {
+        width: 210px;
+        height: 210px;
+    }
+}
+
+.showrooms {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.showrooms__title {
+    font-size: 32px;
+    text-align: center;
+    margin: 50px;
+    padding: 30px 0;
+    color: #000;
+}
+
+.showrooms__content {
+    display: flex;
+    background-color: #333333;
+    padding: 50px;
+    gap: 50px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+}
+
+.showrooms__description {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.showrooms__description p {
+    color: #e7e7e7;
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.showrooms__map {
+    flex: 1;
+    background: #e7e7e7;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 350px;
+}
+
+.footer {
+    background-color: #1C1C1C;
+    padding:  50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.nav-link {
+    color: #e7e7e7;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .social-icons {
+        gap: 40px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+
+.main-container {
+    background-color: #333;
+    padding: 20px;
+    width: 1200px;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.logo-frame {
+    background-color: #181818;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: transform 1s ease;
+}
+
+.logo-frame:hover {
+    transform: scale(1.1);
+}
+
+.logo-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.logo-label {
+    color: #e7e7e7;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.header2 {
+    color: #e7e7e7;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.abaudno {
+    text-decoration: none;
+}
